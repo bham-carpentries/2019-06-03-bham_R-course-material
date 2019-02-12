@@ -117,26 +117,28 @@ sessionInfo()
 
 
 ~~~
-R version 3.5.2 (2018-12-20)
-Platform: x86_64-apple-darwin15.6.0 (64-bit)
-Running under: macOS Mojave 10.14.2
+R version 3.5.1 (2018-07-02)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 7 x64 (build 7601) Service Pack 1
 
 Matrix products: default
-BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
 
 locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+[1] LC_COLLATE=English_United Kingdom.1252 
+[2] LC_CTYPE=English_United Kingdom.1252   
+[3] LC_MONETARY=English_United Kingdom.1252
+[4] LC_NUMERIC=C                           
+[5] LC_TIME=English_United Kingdom.1252    
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] checkpoint_0.4.5 stringr_1.3.1    knitr_1.21      
+[1] checkpoint_0.4.5 stringr_1.3.1    knitr_1.20      
 
 loaded via a namespace (and not attached):
-[1] compiler_3.5.2 magrittr_1.5   tools_3.5.2    stringi_1.2.4 
-[5] xfun_0.4       evaluate_0.12 
+[1] compiler_3.5.1 magrittr_1.5   tools_3.5.1    stringi_1.2.4 
+[5] evaluate_0.12 
 ~~~
 {: .output}
 

@@ -260,13 +260,13 @@ No matter how
 complicated our analyses become, all data in R is interpreted as one of these
 basic data types. This strictness has some really important consequences.
 
-A user has added details of another cat. This information is in the file
+Let's add details of another cat to `feline-data.csv` file and save this information is in the file
 `data/feline-data_v2.csv`.
 
 
 
 ~~~
-file.show("data/feline-data_v2.csv")
+file.edit("data/feline-data.csv")
 ~~~
 {: .language-r}
 
@@ -346,17 +346,6 @@ class(cats)
 In order to successfully use our data in R, we need to understand what the basic
 data structures are, and how they behave. For now, let's remove that extra line
 from our cats data and reload it, while we investigate this behavior further:
-
-feline-data.csv:
-
-```
-coat,weight,likes_string
-calico,2.1,1
-black,5.0,0
-tabby,3.2,1
-```
-
-And back in RStudio:
 
 
 ~~~
