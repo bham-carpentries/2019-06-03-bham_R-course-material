@@ -165,6 +165,131 @@ factors
 
 Understanding what happened here is key to successfully analyzing data in R.
 
+## How data are handled by computer
+
+R or any other programming language will operate with data in binary format.
+This means binary string consisting of `1` and `0` are used to represent data values and have base of $2^n$.
+
+For example string '10' can be converted back to it's decimal respresantation of a number using formula:
+$1*2^1 + 0*2^0$. Bits are counted from the right to left and index starts from 0.
+
+
+~~~
+1*2^1 + 0*2^0
+~~~
+{: .language-r}
+
+
+
+~~~
+[1] 2
+~~~
+{: .output}
+
+Smallest number of bits a computer can store in it's memory are 8 bits or 1 byte, so string `01` will be stored as.
+`00000010`. Using formula $\sum_{i=1}^n {bit}_i * 2^{i-1}$.
+We can use R to verify that his string still represents number 2.
+
+
+~~~
+0*2^7 + 0*2^6 + 0*2^5 + 0*2^4 + 0*2^3 + 0*2^2 + 1*2^1 + 0*2^0
+~~~
+{: .language-r}
+
+
+
+~~~
+[1] 2
+~~~
+{: .output}
+
+By changing values from 0 to 1 at different locations we can change value of the number. 
+For example, number 4 can be represented in binary form as: `00000100`.
+
+
+~~~
+0*2^7 + 0*2^6 + 0*2^5 + 0*2^4 + 0*2^3 + 1*2^2 + 0*2^1 + 0*2^0
+~~~
+{: .language-r}
+
+
+
+~~~
+[1] 4
+~~~
+{: .output}
+
+And if we replace all values in the string with `1` we can see that range of discreate integer values which can be
+stored in 8 bits is from 0 to 255.
+
+
+~~~
+1*2^7 + 1*2^6 + 1*2^5 + 1*2^4 + 1*2^3 + 1*2^2 + 1*2^1 + 1*2^0
+~~~
+{: .language-r}
+
+
+
+~~~
+[1] 255
+~~~
+{: .output}
+
+To increase the range of stored values more than 8 bits are used to store integers. Most commonly it is 32 bits.
+And we can check the range of the values stored in R:
+
+
+~~~
+2^32
+~~~
+{: .language-r}
+
+
+
+~~~
+[1] 4294967296
+~~~
+{: .output}
+
+So far these formats can store only positive values, in case  if negative values need to be stored as well, one bit of 32 bit string
+is devoted to define if number is positive or negatvie (`0` for negative, `1` for positive). Losing one bit to store sign also affects 
+range of numbers we can store.
+
+
+~~~
+(2^31)+1
+~~~
+{: .language-r}
+
+
+
+~~~
+[1] 2147483649
+~~~
+{: .output}
+
+
+
+~~~
+(2^32/2^31)
+~~~
+{: .language-r}
+
+
+
+~~~
+[1] 2
+~~~
+{: .output}
+
+This commonly used data type is called signed integer. For storing decimal numbers which different binary data types are used, where number
+is transformed to represent exponential equation and then stored in form of two binary strings. This data type is called floating point and
+most commonly is called float for 32-bit strings and double if string is of length of 64 bits.
+
+To store characters, for example `a` or `cats`, a computer is using pre-defined translation tables where each character is mapped to specific integer code.
+ASCII is most commonly used basic mapping table, which is using 7-bit binary strings to define 128 unique characters. 
+
+
 ## Data Types
 
 If you guessed that the last command will return an error because `2.1` plus
