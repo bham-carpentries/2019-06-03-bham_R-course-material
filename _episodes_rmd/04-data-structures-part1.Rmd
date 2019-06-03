@@ -100,7 +100,7 @@ Understanding what happened here is key to successfully analyzing data in R.
 > ## Tip: How data are handled by computer
 >
 > R or any other programming language will operate with data in binary format.
-> This means binary string consisting of `1` and `0` are used to represent data values and have base > of $2^n$.
+> This means binary string consisting of `1` and `0` are used to represent data values and have base of $2^n$.
 >
 > For example string '10' can be converted back to it's decimal respresantation of a number using formula:
 > $1*2^1 + 0*2^0$. Bits are counted from the right to left and index starts from 0.
@@ -138,7 +138,7 @@ Understanding what happened here is key to successfully analyzing data in R.
 > 2^32
 > ```
 >
-> So far these formats can store only positive values, in case  if negative values need to be stored as well, one bit > of 32 bit string
+> So far these formats can store only positive values, in case  if negative values need to be stored as well, one bit of 32 bit string
 > is devoted to define if number is positive or negatvie (`0` for negative, `1` for positive). Losing one bit to store sign also affects 
 > range of numbers we can store.
 >
@@ -152,8 +152,8 @@ Understanding what happened here is key to successfully analyzing data in R.
 > is transformed to represent exponential equation and then stored in form of two binary strings. This data type is called floating point and
 > most commonly is called float for 32-bit strings and double if string is of length of 64 bits.
 >
->To store characters, for example `a` or `cats`, a computer is using pre-defined translation tables >where each character is mapped to specific integer code.
->ASCII is most commonly used basic mapping table, which is using 7-bit binary strings to define 128 >unique characters. 
+>To store characters, for example `a` or `cats`, a computer is using pre-defined translation tables where each character is mapped to specific integer code.
+>ASCII is most commonly used basic mapping table, which is using 7-bit binary strings to define 128 unique characters. 
 {: .callout}
 
 ## Data Types
